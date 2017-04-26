@@ -42,7 +42,11 @@
   <ItemGroup>
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyPattern.cs" />
     <Compile Include="StrategyPattern.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DecoratorPattern.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
