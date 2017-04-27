@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using BLL.DecoratorPattern;
 using BLL.ProxyPattern;
+using BLL.FactoryMethodPattern;
+using BLL.PrototypePattern;
 
 namespace Console
 {
@@ -21,14 +23,39 @@ namespace Console
             //d2.SetComponent(d1);
             //d2.Operation();
 
-            SchollGirl mm = new SchollGirl();
-            mm.Name = "敏敏";
+            ////代理模式
+            //SchollGirl mm = new SchollGirl();
+            //mm.Name = "敏敏";
 
-            Proxy p = new Proxy(mm);
+            //Proxy p = new Proxy(mm);
 
-            p.GiveDolls();
-            p.GiveChocolate();
-            p.GiveFlowers();
+            //p.GiveDolls();
+            //p.GiveChocolate();
+            //p.GiveFlowers();
+
+            ////工厂方法模式
+            //IFactory factory = new UndergraduateFactory();
+            //LeiFeng student = factory.CreateLeiFeng();
+
+            //student.BuyRice();
+            //student.Sweep();
+            //student.Wash();
+
+            //原型模式
+            Resume a = new Resume("张三");
+            a.SetPersonalInfo("男", "19");
+            a.SetWorkExperience("2001-1-2", "aa公司");
+
+            Resume b = (Resume)a.Clone();
+            b.SetWorkExperience("2001-1-3", "bb公司");
+
+            Resume c = (Resume)a.Clone();
+            c.SetPersonalInfo("男", "20");
+            c.SetWorkExperience("2001-1-4", "cc公司");
+
+            a.Display();
+            b.Display();
+            c.Display();
 
             System.Console.Read();
         }
