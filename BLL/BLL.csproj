@@ -46,6 +46,7 @@
     <Compile Include="PrototypePattern.cs" />
     <Compile Include="ProxyPattern.cs" />
     <Compile Include="StrategyPattern.cs" />
+    <Compile Include="TemplateMethodPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecoratorPattern.cs" />

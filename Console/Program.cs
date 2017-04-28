@@ -7,6 +7,7 @@ using BLL.DecoratorPattern;
 using BLL.ProxyPattern;
 using BLL.FactoryMethodPattern;
 using BLL.PrototypePattern;
+using BLL.TemplateMethodPattern;
 
 namespace Console
 {
@@ -41,21 +42,31 @@ namespace Console
             //student.Sweep();
             //student.Wash();
 
-            //原型模式
-            Resume a = new Resume("张三");
-            a.SetPersonalInfo("男", "19");
-            a.SetWorkExperience("2001-1-2", "aa公司");
+            ////原型模式
+            //Resume a = new Resume("张三");
+            //a.SetPersonalInfo("男", "19");
+            //a.SetWorkExperience("2001-1-2", "aa公司");
 
-            Resume b = (Resume)a.Clone();
-            b.SetWorkExperience("2001-1-3", "bb公司");
+            //Resume b = (Resume)a.Clone();
+            //b.SetWorkExperience("2001-1-3", "bb公司");
 
-            Resume c = (Resume)a.Clone();
-            c.SetPersonalInfo("男", "20");
-            c.SetWorkExperience("2001-1-4", "cc公司");
+            //Resume c = (Resume)a.Clone();
+            //c.SetPersonalInfo("男", "20");
+            //c.SetWorkExperience("2001-1-4", "cc公司");
 
-            a.Display();
-            b.Display();
-            c.Display();
+            //a.Display();
+            //b.Display();
+            //c.Display();
+
+            //模板方法模式
+            AbstractClass c;
+            c = new ConcreteClassA();
+            c.TemplateMethod();
+
+            c = new ConcreteClassB();
+            c.TemplateMethod();
+            //c.F1();
+            //c.F2();
 
             System.Console.Read();
         }
