@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuilderPattern.cs" />
+    <Compile Include="FacadePattern.cs" />
     <Compile Include="FactoryMethodPattern.cs" />
     <Compile Include="FactoryPattern.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

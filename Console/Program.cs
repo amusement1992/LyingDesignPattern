@@ -8,6 +8,8 @@ using BLL.ProxyPattern;
 using BLL.FactoryMethodPattern;
 using BLL.PrototypePattern;
 using BLL.TemplateMethodPattern;
+using BLL.FacadePattern;
+using BLL.BuilderPattern;
 
 namespace Console
 {
@@ -58,15 +60,33 @@ namespace Console
             //b.Display();
             //c.Display();
 
-            //模板方法模式
-            AbstractClass c;
-            c = new ConcreteClassA();
-            c.TemplateMethod();
+            ////模板方法模式
+            //AbstractClass c;
+            //c = new ConcreteClassA();
+            //c.TemplateMethod();
 
-            c = new ConcreteClassB();
-            c.TemplateMethod();
-            //c.F1();
-            //c.F2();
+            //c = new ConcreteClassB();
+            //c.TemplateMethod();
+            ////c.F1();
+            ////c.F2();
+
+            ////外观类
+            //Facade facade = new Facade();
+            //facade.MethodA();
+            //facade.MethodB();
+
+            //建造者模式
+            Director director = new Director();
+            Builder b1 = new ConcreteBuilder1();
+            Builder b2 = new ConcreteBuilder2();
+
+            director.Construct(b1);
+            Product p1 = b1.GetResult();
+            p1.Show();
+
+            director.Construct(b2);
+            Product p2 = b2.GetResult();
+            p2.Show();
 
             System.Console.Read();
         }
