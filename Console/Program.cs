@@ -10,6 +10,8 @@ using BLL.PrototypePattern;
 using BLL.TemplateMethodPattern;
 using BLL.FacadePattern;
 using BLL.BuilderPattern;
+using BLL.ObserverPattern;
+using BLL.AbstractFactoryPattern;
 
 namespace Console
 {
@@ -75,18 +77,33 @@ namespace Console
             //facade.MethodA();
             //facade.MethodB();
 
-            //建造者模式
-            Director director = new Director();
-            Builder b1 = new ConcreteBuilder1();
-            Builder b2 = new ConcreteBuilder2();
+            ////建造者模式
+            //Director director = new Director();
+            //Builder b1 = new ConcreteBuilder1();
+            //Builder b2 = new ConcreteBuilder2();
 
-            director.Construct(b1);
-            Product p1 = b1.GetResult();
-            p1.Show();
+            //director.Construct(b1);
+            //Product p1 = b1.GetResult();
+            //p1.Show();
 
-            director.Construct(b2);
-            Product p2 = b2.GetResult();
-            p2.Show();
+            //director.Construct(b2);
+            //Product p2 = b2.GetResult();
+            //p2.Show();
+
+            ////观察者模式
+            //ConcreteSubject s = new ConcreteSubject();
+            //s.Attach(new ConcreteObserver(s, "X"));
+            //s.Attach(new ConcreteObserver(s, "Y"));
+            //s.Attach(new ConcreteObserver(s, "Z"));
+
+            //s.SubjectState = "abc";
+            //s.Notify();
+
+            //抽象工厂模式
+            User user = new User();
+            IUser iu = DataAccess.CreateUser();
+            iu.Insert(user);
+            iu.GetUser(1);
 
             System.Console.Read();
         }

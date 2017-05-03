@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /// <summary>
-/// 工厂模式
+/// 工厂模式：用一个单独的类来做这个创造实例的过程，这就是工厂。
 /// </summary>
 namespace BLL.FactoryPattern
 {
