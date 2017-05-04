@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AbstractFactoryPattern.cs" />
     <Compile Include="BuilderPattern.cs" />
+    <Compile Include="Delegate_Event.cs" />
     <Compile Include="FacadePattern.cs" />
     <Compile Include="FactoryMethodPattern.cs" />
     <Compile Include="FactoryPattern.cs" />

@@ -12,6 +12,7 @@ using BLL.FacadePattern;
 using BLL.BuilderPattern;
 using BLL.ObserverPattern;
 using BLL.AbstractFactoryPattern;
+using BLL.Delegate_Event;
 
 namespace Console
 {
@@ -99,11 +100,21 @@ namespace Console
             //s.SubjectState = "abc";
             //s.Notify();
 
-            //抽象工厂模式
-            User user = new User();
-            IUser iu = DataAccess.CreateUser();
-            iu.Insert(user);
-            iu.GetUser(1);
+            ////抽象工厂模式
+            //User user = new User();
+            //IUser iu = DataAccess.CreateUser();
+            //iu.Insert(user);
+            //iu.GetUser(1);
+
+            //委托、事件
+            Cat c = new Cat("Tom");
+            Mouse m1 = new Mouse("Jerry");
+            Mouse m2 = new Mouse("Jack");
+
+            c.CatShout += new Cat.CatShoutEventHandler(m1.Run);
+            c.CatShout += new Cat.CatShoutEventHandler(m2.Run);
+
+            c.Shout();
 
             System.Console.Read();
         }
